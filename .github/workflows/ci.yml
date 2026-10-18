@@ -25,5 +25,10 @@ jobs:
         run: |
           mcp-audit audit examples/minimal-server.json
           test $? -eq 0
+          # The dangerous manifest is EXPECTED to fail (exit 1); capture the
+          # code without tripping `set -e`, which would abort the step first.
+          set +e
           mcp-audit audit examples/dangerous-server.json --format json > /dev/null
-          test $? -eq 1
+          CODE=$?
+          set -e
+          test $CODE -eq 1
