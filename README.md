@@ -1,3 +1,5 @@
+> **Archived — superseded by [mcp-permission-firewall](https://github.com/Iceman2050/mcp-permission-firewall).** This tool is no longer maintained. MCP server permission auditing and least-privilege remediation now live in the canonical repo linked above; use it instead.
+
 # mcp-server-permission-auditor
 
 A real, working CLI that audits **MCP (Model Context Protocol) server manifests** for overbroad
